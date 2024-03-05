@@ -38,8 +38,10 @@ public class ApplicationConfig {
         return authProvider;
     }
     // AuthenticationManager: quản lý việc xác thực người dùng
+    // (được sử dụng để xác thực thông tin đăng nhập của người dùng)
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
+
         return config.getAuthenticationManager();
     }
 

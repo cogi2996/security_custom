@@ -17,6 +17,8 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 @Component
 @RequiredArgsConstructor
+// filter chỉ là  một layer ( tầng ) để handles request , chứ không phải là một layer có chức năng xác thực
+// trong filter này đặc biệt hơn một tí vì nó vừa handles nhng nó cx bao gồm xác thực
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     private final JwtService jwtService;
